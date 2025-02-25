@@ -1,0 +1,19 @@
+# Template file for 'satty'
+pkgname=satty
+version=0.16.0
+revision=1
+build_style=cargo
+hostmakedepends="glib-devel pkg-config libadwaita-devel gtk4-devel gdk-pixbuf-devel libepoxy-devel fontconfig"
+makedepends="glib libadwaita gtk4 gdk-pixbuf fontconfig libepoxy"
+short_desc="Screenshot annotation tool inspired by Swappy and Flameshot"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MPL-2.0"
+homepage="https://github.com/gabm/Satty"
+distfiles="https://github.com/gabm/Satty/archive/refs/tags/v${version}.tar.gz"
+checksum=36ffbea973fd844d92998f1d5aed53c779692e956ed07490d324812223eab4bd
+
+post_install() {
+    vlicense LICENSE
+    vinstall assets/satty.svg 644 /usr/share/icons/hicolor/scalable/apps/satty.svg
+    vinstall satty.desktop 644 /usr/share/applications
+}
