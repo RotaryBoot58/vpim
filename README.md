@@ -1,28 +1,15 @@
 # vpim
-Void Packages IMproved
+Void Packages IMproved is a repository aiming to provide software that is not listed in the official repository and be more flexible.
+
+# Branches
+main: dev branch, where the packages templates are stored and all the developments is done.
+templates: branch containing only the templates files in case you want to build it yourself.
 
 ## Setting up this repo
-Create a file in `/etc/xbps.d` called `90-repository-vpim.conf` and put the following line inside it:
+Create a file in `/etc/xbps.d` called `90-repository-vpim.conf` or something that you want and put the following line inside it:
 ```
-repository=
+repository=<REPOSITORY-LOCATION>
 ```
-Then run ```# xbps-install -S``` to sync all the repositories
+<REPOSITORY-LOCATION> can either be the absolute path or the URL
 
-## Contributing
-Clone the git repository and install the bootstrap packages:
-
-```
-$ git clone https://codeberg.org/RotaryBoot58/vpim.git
-$ cd vpim
-$ ./xbps-src binary-bootstrap
-```
-
-Build a package by specifying the `pkg` target and the package name:
-
-```./xbps-src pkg <package_name>```
-
-Use `./xbps-src -h` to list all available targets and options.
-
-Once built, the package will be available in `hostdir/binpkgs` or an appropriate subdirectory (e.g. `hostdir/binpkgs/nonfree`). To install the package:
-
-```xbps-install --repository hostdir/binpkgs <package_name>```
+Then run ```xbps-install -S``` to sync all the repositories
