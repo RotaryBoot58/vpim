@@ -7,7 +7,7 @@ templates: branch containing only the templates files in case you want to build 
 
 ## Setting up this repo
 Create a file in `/etc/xbps.d` called `99-repository-vpim.conf`. you can change the two numbers at the beggining or change the name completely, just make sure to make it end with `.conf` and having the following line on it:
-```repository=https://rotaryboot58.github.io/vpim/```
+```repository=https://rotaryboot58.github.io/vpim```
 Then run ```xbps-install -S``` to sync all the repositories
 
 Alternatively you can download the file in the repository
