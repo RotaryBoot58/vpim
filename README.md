@@ -6,13 +6,11 @@ main: dev branch, where the packages templates are stored and all the developmen
 templates: branch containing only the templates files in case you want to build it yourself.
 
 ## Setting up this repo
-Create a file in `/etc/xbps.d` called `90-repository-vpim.conf` or something that you want and put the following line inside it:
-```
-repository=<REPOSITORY-LOCATION>
-```
-<REPOSITORY-LOCATION> can either be the absolute path or the URL
-
+Create a file in `/etc/xbps.d` called `99-repository-vpim.conf`. you can change the two numbers at the beggining or change the name completely, just make sure to make it end with `.conf` and having the following line on it:
+```repository=https://rotaryboot58.github.io/vpim/```
 Then run ```xbps-install -S``` to sync all the repositories
+
+Alternatively you can download the file in the repository
 
 # Building packages manually
 Install the binary-bootstrap ```./xbps-src binary-bootstrap```
