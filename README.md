@@ -19,6 +19,10 @@ Build it with ```./xbps-src pkg $package_name```
 # Annotations for me :)
 Install ```xtools```
 
-New Package: ```xnew $package_name```
-Updating checksum: ```xgensum -i $package_name```
-Checking for linting: ```xlint $packane_template_file```
+New Package: ```xnew $package_name```  
+Updating checksum: ```xgensum -i $package_name```  
+Checking for linting: ```xlint $packane_template_file```  
+Signing repo: xbps-rindex --sign --signedby "$signature" --privkey $ssh_key hostdir/binpkgs/main  
+Signing packages: xbps-rindex --sign-pkg --privkey $ssh_key hostdir/binpkgs/main/*.xbps
+
+Add package first with xbps-rindex -a and then sign it
