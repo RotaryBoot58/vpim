@@ -3,7 +3,6 @@ Void Packages IMproved is a repository aiming to provide software that is not li
 
 # Branches
 main: the main/master branch. all the important files are in this branch.
-void: contains all the files necessary for the development of vpim from the original 'void-packages' repository such as xbps-src and common.
 
 # Setting up this repo
 1. Download the '99-repository-vpim.conf' file from this repository.
