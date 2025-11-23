@@ -73,12 +73,12 @@ xlibre-server-xvfb_package() {
 	}
 }
 
-#xlibre-server-devel_package() {
-#	depends="${makedepends}"
-#	short_desc+=" - development files"
-#	pkg_install() {
-#		vmove usr/include
-#		vmove usr/lib/pkgconfig
-#		vmove usr/share/aclocal
-#	}
-#}
+xlibre-server-devel_package() {
+	depends="${makedepends}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+		vmove usr/share/aclocal
+	}
+}
