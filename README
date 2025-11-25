@@ -3,3 +3,11 @@ This is a mirror of the Codeberg repository, all the work is made on https://cod
 
 # Contributing
 Even though this repo is just a mirror, issues and related can be opened and will be properly addressed.
+
+# Branches
+The main branch exists to host the precompiled binaries (totally not abusing github pages functionality) to be used around the web.
+The templates branch contain every template file for every package in the vpim repository, there you are free to get those files and build it yourself in case you don't this this repository.
+
+# Security and concerns about this third-party repository
+No software have been modified to contain any sort of malicious code, if for some reason malicious code is found, it's origin is from the software developer.
+I, the maintainer do not know how to code in low level languages such as C, that alone show that I'm incapable of adding malicious code.
