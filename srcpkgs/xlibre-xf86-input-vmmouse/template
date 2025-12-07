@@ -1,0 +1,28 @@
+# Template file for 'xlibre-xf86-input-vmmouse'
+pkgname=xlibre-xf86-input-vmmouse
+version=13.2.0.3
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf automake fakeroot gawk gettext libtool m4 pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-input-26_1"
+short_desc="XLibre VMWare Mouse input driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+conflicts="xf86-input-vmmouse xorg-server"
+homepage="https://github.com/X11Libre/xf86-input-vmmouse"
+distfiles="https://github.com/X11Libre/xf86-input-vmmouse/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=326e94e6bfe2fc1387c33f4ae1c964729646c1939e4748af3d0e1e5024c7ce7f
+lib32disabled=yes
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr --with-udev-rules-dir=/usr/lib/udev/rules.d
+	make
+}
+
+post_install() {
+	vlicense COPYING
+	# Remove HAL stuff, it's obsolete.
+	rm -rfv "${DESTDIR}"/usr/{lib,share}/hal
+}
