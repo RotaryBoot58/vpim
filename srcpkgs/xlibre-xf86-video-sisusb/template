@@ -1,0 +1,26 @@
+# Template file for 'xlibre-xf86-video-sisusb'
+pkgname=xlibre-xf86-video-sisusb
+version=0.9.7.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf xorgproto automake fakeroot gawk gettext libtool m4 pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre SiS USB video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-sisusb"
+distfiles="https://github.com/X11Libre/xf86-video-sisusb/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=19835f66f4684c6e08184a00d1bb563effe0bc934fa877842f1953971bcce998
+lib32disabled=yes
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
