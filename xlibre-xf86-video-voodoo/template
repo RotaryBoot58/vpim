@@ -1,0 +1,25 @@
+# Template file for 'xlibre-xf86-video-voodoo'
+pkgname=xlibre-xf86-video-voodoo
+version=1.2.6.3
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf xorgproto automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre 3dfx Voodoo1/Voodoo2 2D video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-voodoo"
+distfiles="https://github.com/X11Libre/xf86-video-voodoo/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=0373f8a290ef6c2c7b4430008af15564502d93808ea19c00f27a549f3d159c03
+lib32disabled=yes
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
