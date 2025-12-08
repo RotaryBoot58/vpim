@@ -1,0 +1,27 @@
+# Template file for 'xlibre-xf86-video-fbdev'
+pkgname=xlibre-xf86-video-fbdev
+version=0.5.1.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf xorgproto automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre framebuffer video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-fbdev"
+distfiles="https://github.com/X11Libre/xf86-video-fbdev/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=05127ef534bef76f10eea3ad583fd364243cd3bb956584ab203ca8fc58fb9793
+lib32disabled=yes
+CFLAGS="-I$XBPS_CROSS_BASE/usr/include/xorg"
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
