@@ -1,0 +1,27 @@
+# Template file for 'xlibre-xf86-video-vesa'
+pkgname=xlibre-xf86-video-vesa
+version=2.6.0.4
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf xorgproto automake fakeroot gawk gettext libtool m4 pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre vesa video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-vesa"
+distfiles="https://github.com/X11Libre/xf86-video-vesa/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=c87e821b2a89cb3c487c1306bf192c57f3dbb775f34044fc2e32b95fd9573fdd
+lib32disabled=yes
+CFLAGS="-I$XBPS_CROSS_BASE/usr/include/xorg"
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
