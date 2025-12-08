@@ -1,0 +1,27 @@
+# Template file for 'xlibre-xf86-video-cirrus'
+pkgname=xlibre-xf86-video-cirrus
+version=1.6.0.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel xorgproto autoconf automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre Cirrus Logic video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-cirrus"
+distfiles="https://github.com/X11Libre/xf86-video-cirrus/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=137122530d40587b94afefefe20a7d0423cf3cc4cd18095b5a45da34035024a4
+lib32disabled=yes
+LDFLAGS="-Wl,-z,lazy"
+CFLAGS="-fcommon -Wno-pointer-arith -Wno-discarded-qualifiers -Wno-unused-label"
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
