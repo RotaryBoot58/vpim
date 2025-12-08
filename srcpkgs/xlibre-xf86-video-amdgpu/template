@@ -1,0 +1,27 @@
+# Template file for 'xlibre-xf86-video-amdgpu'
+pkgname=xlibre-xf86-video-amdgpu
+version=23.0.0.6
+revision=1
+build_style=gnu-configure
+configure_args="--prefix=/usr --enable-glamor"
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel xorgproto autoconf automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros eudev-libudev-devel MesaLib-devel libpciaccess-devel pixman-devel libXfont2-devel"
+depends="virtual?xserver-abi-video-28_1 mesa-dri"
+short_desc="XLibre amdgpu video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-amdgpu"
+distfiles="https://github.com/X11Libre/xf86-video-amdgpu/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=27c6cc0a8e024517ccf9c044b84fef70eb9a43c328c147ddeb2251e30a5af04c
+lib32disabled=yes
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	./autogen.sh
+	./configure
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
