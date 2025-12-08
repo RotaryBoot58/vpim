@@ -1,0 +1,26 @@
+# Template file for 'xlibre-xf86-video-dummy'
+pkgname=xlibre-xf86-video-dummy
+version=0.4.1.4
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel autoconf xorgproto automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+depends="virtual?xserver-abi-video-28_1"
+short_desc="XLibre dummy video driver"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="MIT"
+homepage="https://github.com/X11Libre/xf86-video-dummy"
+distfiles="https://github.com/X11Libre/xf86-video-dummy/archive/refs/tags/${pkgname}-${version}.tar.gz"
+checksum=61c9835845b11c8000fb6a3e6907513a8c6594ba5944b758872a72416bc5788b
+lib32disabled=yes
+LDFLAGS="-Wl,-z,lazy"
+
+pre_configure() {
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+}
+
+post_install() {
+	vlicense COPYING
+}
