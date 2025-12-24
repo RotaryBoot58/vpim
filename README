@@ -1,5 +1,6 @@
-# Notice:
-there is a mirror of this repo on github, even though it is just a mirror, contributions will be properly addressed
+# Notices:
+Github mirror: there is a mirror of this repo on github, even though it is just a mirror, contributions will be properly addressed.
+Nvidia drivers: these packages are a clone of the Nvidia package in the official repository, only changing the video abi version.
 
 # Branches
 main: the main/master branch. all the important files are in this branch.
