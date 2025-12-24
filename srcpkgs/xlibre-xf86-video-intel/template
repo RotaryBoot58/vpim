@@ -1,21 +1,24 @@
 # Template file for 'xlibre-xf86-video-intel'
 pkgname=xlibre-xf86-video-intel
-version=3.0.0.6
+version=25.0.0
 revision=1
 build_style=gnu-configure
-configure_args="--with-default-dri=3 --libexecdir=/usr/lib"
-hostmakedepends="git automake libtool pkg-config xorg-util-macros"
-makedepends="xlibre-server-devel autoconf automake binutils fakeroot findutils gawk gcc gettext gzip libtool m4 make patch pkgconf xorg-util-macros libXScrnSaver-devel libXcursor-devel libXinerama-devel libXrandr-devel libXtst-devel libXvMC-devel"
+hostmakedepends="pkg-config"
+makedepends="
+	xlibre-server-devel automake libtool pkgconf xorg-util-macros libXScrnSaver-devel
+	libXcursor-devel libXinerama-devel libXrandr-devel libXtst-devel libXvMC-devel
+"
 depends="virtual?xserver-abi-video-28_1 mesa-dri"
 short_desc="XLibre DDX Intel video driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-intel"
 distfiles="https://github.com/X11Libre/xf86-video-intel/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=5be44aa05eea12df5999f01ae3ccfc9ed969e89801a3af214cac23581e0721ea
+checksum=c37410bc6efd5789adcd9fd2c91308a73101b08419309d4755bd6b5fa5254eff
 lib32disabled=yes
 CFLAGS="-fcommon"
 LDFLAGS="-Wl,-z,lazy"
+configure_args="--with-default-dri=3 --libexecdir=/usr/lib"
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh
