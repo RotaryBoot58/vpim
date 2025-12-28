@@ -12,7 +12,7 @@ main: the main/master branch. all the important files are in this branch.
 
 Alternatively:
 1. Create a file with the 'conf' extension, the name should be self-explanatory but this is not mandatory.
-2. Put the following line in the file content: 'repository=https://rotaryboot58.github.io/vpim'.
+2. Put the following line in the file content: 'repository=https://github.com/RotaryBoot58/vpim/raw/refs/heads/binaries'.
 3. Place it in '/etc/xbps.d/'.
 4. Synchronize it.
 
