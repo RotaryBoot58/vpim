@@ -1,23 +1,25 @@
 # Template file for 'xlibre-xf86-input-synaptics'
 pkgname=xlibre-xf86-input-synaptics
-version=1.10.0.2
+version=25.0.0
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="libevdev-devel pixman-devel libpciaccess-devel xlibre-server-devel autoconf automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros libevdev-devel"
+makedepends="
+	xlibre-server-devel libX11-devel libXtst-devel libevdev-devel pixman-devel libpciaccess-devel
+	automake pkgconf libtool xorg-util-macros
+"
 depends="virtual?xserver-abi-input-26_1"
 short_desc="XLibre synaptics touchpad input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-synaptics"
 distfiles="https://github.com/X11Libre/xf86-input-synaptics/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=3e6bc8453f5f957074db28b12e4826ef65ab017e0dd5e34a29d57692ce0c7fe5
+checksum=fca6a16ed199505a27dc167e88722b4d45aa5f46e86561d6c6eee3d7a750a107
 lib32disabled=yes
+configure_args="--prefix=/usr"
 
 pre_configure() {
 	./autogen.sh
-	./configure --prefix=/usr
-	make
 }
 
 post_install() {
@@ -29,6 +31,5 @@ xlibre-xf86-input-synaptics-devel_package() {
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
-		vmove usr/lib/pkgconfig
 	}
 }
