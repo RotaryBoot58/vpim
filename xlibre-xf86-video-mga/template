@@ -1,23 +1,23 @@
 # Template file for 'xlibre-xf86-video-mga'
 pkgname=xlibre-xf86-video-mga
-version=2.1.0.2
+version=25.0.0
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
-makedepends="xlibre-server-devel xorgproto autoconf automake binutils fakeroot findutils gawk gettext gzip libtool m4 make patch pkgconf xorg-util-macros"
+makedepends="xlibre-server-devel automake libtool pkgconf xorg-util-macros"
 depends="virtual?xserver-abi-video-28_1"
 short_desc="XLibre Matrox Graphics Adapter video driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-mga"
 distfiles="https://github.com/X11Libre/xf86-video-mga/archive/refs/tags/${pkgname}-${version}.tar.gz"
-checksum=c2a2aa3c3c312b0df878b2af1315157ec2b0ad9bc7f80c90eb1f51c273ab32ea
+checksum=af619a36e6b7c8f951e3c1329889bbacd8864ed8dea32d306ab8cfd748b24ad4
 lib32disabled=yes
 LDFLAGS="-Wl,-z,lazy"
 CFLAGS="-fcommon"
 
 pre_configure() {
-	autoreconf -if
+	./autogen.sh
 }
 
 post_install() {
