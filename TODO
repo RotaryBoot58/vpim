@@ -1,3 +1,18 @@
+# Waterfox
+- Make localization work in build
+## Note: this is from opensuse waterfox template
+  export JOBS=$(echo $(grep -c ^processor /proc/cpuinfo)\/2 | bc)
+  sed -r '/^(ja-JP-mac|en-US|)$/d;s/ .*$//' ../locales.shipped | cut -f1 -d":" \
+    | xargs -n 1 -P $JOBS -I {} /bin/sh -c '
+        locale=$1
+        cp ../mozconfig_LANG ${PWD}/mozconfig_$locale
+        sed -i "s|obj_LANG|obj_$locale|" ${PWD}/mozconfig_$locale
+        export MOZCONFIG=${PWD}/mozconfig_$locale
+        ./mach build config/nsinstall langpack-$locale
+        cp -L ../obj_$locale/dist/linux-*/xpi/waterfox-$WF_VERSION.$locale.langpack.xpi \
+            ${PWD}/langpack-$locale@l10n.waterfox.net.xpi
+' -- {}
+
 # Packages to build:
 xlibre-xf86-video-armsoc
 xlibre-xf86-video-openchrome
