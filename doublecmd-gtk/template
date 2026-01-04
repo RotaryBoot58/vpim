@@ -6,7 +6,7 @@ build_style=gnu-makefile
 # Disable PIE check for this Pascal-built executable
 nostrip=yes
 no_pie=yes
-hostmakedepends="lazarus fpc git which sed gawk"
+hostmakedepends="lazarus fpc git which gawk"
 makedepends="gtk+-devel"
 depends="desktop-file-utils hicolor-icon-theme"
 short_desc="Cross-platform open source file manager with two panels"
