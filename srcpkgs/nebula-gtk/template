@@ -3,8 +3,9 @@ pkgname=nebula-gtk
 version=1.3.7
 revision=1
 build_style=cargo
-hostmakedepends="pkg-config desktop-file-utils appstream-glib glib-devel
- libadwaita-devel gtk4-devel"
+hostmakedepends="
+	pkg-config desktop-file-utils appstream-glib glib-devel libadwaita-devel gtk4-devel
+"
 makedepends="gtk4-devel libadwaita-devel"
 short_desc="GTK frontend for Void Linux's XBPS tooling"
 maintainer="zenobit <zenobit@disroot.org>"
