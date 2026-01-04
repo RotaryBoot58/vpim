@@ -12,7 +12,7 @@ archs="i686 x86_64"
 nopie=yes
 create_wrksrc=yes
 short_desc="${_desc} - Libraries and Utilities"
-hostmakedepends="tar awk gawk mawk nawk"
+hostmakedepends="tar gawk"
 depends="nvidia390-libs-${version}_${revision} nvidia390-gtklibs-${version}_${revision}
  nvidia390-dkms-${version}_${revision} pkgconf"
 
