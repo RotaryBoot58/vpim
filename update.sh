@@ -3,3 +3,5 @@ for pkg in ./srcpkgs/*; do
         ./xbps-src update-check "$(basename $pkg)"
     fi
 done
+
+./xbps-src clean
