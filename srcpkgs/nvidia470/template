@@ -13,7 +13,7 @@ archs="x86_64"
 nopie=yes
 create_wrksrc=yes
 short_desc="${_desc} - Libraries and Utilities"
-hostmakedepends="tar awk gawk nawk"
+hostmakedepends="tar gawk"
 conflicts="nvidia390>=0"
 
 _pkg="NVIDIA-Linux-x86_64-${version}"
@@ -274,7 +274,6 @@ nvidia470-libs-32bit_package() {
 	# manually set 32bit depends for libglvnd
 	depends="glibc-32bit>=0 libX11-32bit>=0 libXext-32bit>=0 libglvnd-32bit>=0"
 	noverifyrdeps=yes
-	repository="multilib/nonfree"
 	conflicts="nvidia390-libs-32bit>=0"
 	pkg_install() {
 		vmove usr/lib32
