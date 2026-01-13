@@ -1,0 +1,21 @@
+# Template file for 'bibata'
+pkgname=bibata
+version=2.0.7
+revision=1
+short_desc="Open source, compact, and material designed cursor set"
+makedepends="gawk"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="GPL-3.0-only"
+homepage="https://github.com/ful1e5/Bibata_Cursor"
+changelog="https://github.com/ful1e5/Bibata_Cursor/releases/v${version}"
+distfiles="https://github.com/ful1e5/Bibata_Cursor/releases/download/v${version}/Bibata.tar.xz"
+checksum=172e33c4ae415278384dcecc7d1a9b7a024266bc944bc751fd86532be1cc6251
+
+do_install() {
+	vmkdir usr/share/icons
+	vcopy Bibata-* usr/share/icons
+}
+
+post_install() {
+	vlicense LICENSE
+}
