@@ -4,6 +4,7 @@ Nvidia drivers: these packages are a clone of the Nvidia package in the official
 
 # Branches
 main: the main/master branch. all the important files are in this branch.
+templates: contains the template files of every package. exist to allow users to build the packages manually.
 
 # Setting up this repo
 1. Download the '99-repository-vpim.conf' file from this repository.
