@@ -1,6 +1,6 @@
 # Template file for 'waterfox'
 pkgname=waterfox
-version=6.6.7
+version=6.6.8
 revision=1
 build_helper="rust"
 hostmakedepends="
@@ -20,7 +20,7 @@ license="MPL-2.0"
 homepage="https://www.waterfox.com/"
 changelog="https://www.waterfox.com/releases/"
 distfiles="https://github.com/BrowserWorks/waterfox/archive/refs/tags/${version}.tar.gz"
-checksum=9c141c32d8fef0863fce37e4c8bfb9c10ed9e4067c495bbd87f416454e941255
+checksum=93e7dd08a973430c956726d97f077362ca647ec1ae3f0516a71eb5aa1e449146
 lib32disabled=yes
 
 case $XBPS_TARGET_MACHINE in
