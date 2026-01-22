@@ -1,0 +1,15 @@
+# Template file for 'darkbolt-cursor'
+pkgname=darkbolt-cursor
+version=1
+revision=1
+repository="themes"
+makedepends="gawk"
+short_desc="Darkbolt cursor theme"
+maintainer="RotaryBoot58 <petersoncraft20@gmail.com>"
+license="Public Domain"
+homepage="https://www.pling.com/p/1254349"
+
+do_install() {
+	vmkdir usr/share/icons
+	vcopy "${FILESDIR}/darkbolt" usr/share/icons
+}
