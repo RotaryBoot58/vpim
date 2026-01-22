@@ -1,7 +1,8 @@
-# Template file for 'bibata'
-pkgname=bibata
+# Template file for 'bibata-cursor'
+pkgname=bibata-cursor
 version=2.0.7
 revision=1
+repository="themes"
 short_desc="Open source, compact, and material designed cursor set"
 makedepends="gawk"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
