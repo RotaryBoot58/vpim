@@ -1,0 +1,17 @@
+# Template file for 'vpim-repo-themes'
+pkgname=vpim-repo-themes
+version=1
+revision=1
+metapackage=yes
+short_desc="Drop-in package for the themes repository"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="Public Domain"
+homepage="https://codeberg.org/RotaryBoot58/vpim"
+
+do_install()
+{
+	vmkdir /usr/share/xbps.d
+
+	echo "repository=https://github.com/RotaryBoot58/vpim/raw/refs/heads/themes" > \
+		${DESTDIR}/usr/share/xbps.d/16-vpim-themes.conf
+}
