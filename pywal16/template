@@ -1,6 +1,6 @@
 # Template file for 'pywal16'
 pkgname=pywal16
-version=3.8.13
+version=3.8.15
 revision=1
 build_style=python3-module
 hostmakedepends="python3-setuptools python3-wheel"
@@ -11,7 +11,7 @@ license="MIT"
 homepage="https://pypi.org/project/pywal16"
 changelog="https://raw.githubusercontent.com/eylles/pywal16/refs/heads/master/CHANGELOG.md"
 distfiles="${PYPI_SITE}/p/pywal16/pywal16-${version}.tar.gz"
-checksum=5e14d23fec3e4b9df2dc8d78b9a4a06a95783bac4930b783357f8c3420020aaf
+checksum=aa01949f21e9a2a3d72305f19c5e366df81da9806ad3321da294d68b48d6ddd0
 conflicts="pywal>=0"
 
 post_install() {
