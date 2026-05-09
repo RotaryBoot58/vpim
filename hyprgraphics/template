@@ -1,0 +1,22 @@
+# Template file for 'hyprgraphics'
+pkgname=hyprgraphics
+version=0.5.1
+revision=1
+build_style=cmake
+configure_args="-DCMAKE_BUILD_TYPE:STRING=Release"
+hostmakedepends="cmake pkgconf"
+makedepends="
+	cairo-devel file-devel hyprutils pixman-devel libglvnd-devel pango-devel
+	libjxl-devel libpng-devel libwebp-devel libjpeg-turbo-devel librsvg-devel libdrm-devel
+	
+"
+short_desc="hyprland graphics resources and utilities"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="BSD-3-Clause"
+homepage="https://github.com/hyprwm/hyprgraphics"
+distfiles="https://github.com/hyprwm/hyprgraphics/archive/refs/tags/v${version}.tar.gz"
+checksum=861ecaad872835922dd5745a612d7a4cc7bfc4babb1d06bc92bc63c2ac013b74
+
+post_install() {
+  vlicense LICENSE
+}
