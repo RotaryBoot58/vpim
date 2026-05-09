@@ -1,0 +1,20 @@
+# Template file for 'hyprlauncher'
+pkgname=hyprlauncher
+version=0.1.6
+revision=1
+build_style=cmake
+hostmakedepends="pkgconf hyprwire"
+makedepends="
+	hyprutils hyprwire hyprlang hyprtoolkit icu-devel wayland-devel wl-clipboard libdrm-devel
+	pixman-devel libqalculate-devel fontconfig-devel cairo-devel pango-devel libxkbcommon-devel
+"
+short_desc="Multipurpose and versatile launcher / picker for Hyprland"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="BSD-3-Clause"
+homepage="https://github.com/hyprwm/hyprlauncher"
+distfiles="https://github.com/hyprwm/${pkgname}/archive/refs/tags/v${version}.tar.gz"
+checksum=f02f93584e1017d7a466d0cafed910f630be39eba6b433922e645c834c4abf59
+
+post_install() {
+	vlicense LICENSE
+}
