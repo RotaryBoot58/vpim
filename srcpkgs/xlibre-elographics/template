@@ -10,7 +10,7 @@ short_desc="XLibre Elographics TouchScreen input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-elographics"
-distfiles="https://github.com/X11Libre/xf86-input-elographics/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-elographics/archive/refs/tags/xlibre-xf86-input-elographics-${version}.tar.gz"
 checksum=0c2a82881199a08ec6236e1338f7699ea42d82cad2fafc99e9869644e8240e9b
 lib32disabled=yes
 configure_args="--prefix=/usr"

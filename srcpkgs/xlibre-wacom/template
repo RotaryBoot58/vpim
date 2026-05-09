@@ -10,7 +10,7 @@ short_desc="XLibre Wacom tablet input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="GPL-2.0-only"
 homepage="https://github.com/X11Libre/xf86-input-wacom"
-distfiles="https://github.com/X11Libre/xf86-input-wacom/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-wacom/archive/refs/tags/xlibre-xf86-input-wacom-${version}.tar.gz"
 checksum=12878547b271f4e59ecd5098f935d4c0bd4560d0c2a3a667385d916bc63d00af
 lib32disabled=yes
 
@@ -18,7 +18,7 @@ post_install() {
 	vlicense GPL
 }
 
-xlibre-xf86-input-wacom-devel_package() {
+xlibre-wacom-devel_package() {
 	lib32disabled=yes
 	short_desc+=" - development files"
 	pkg_install() {

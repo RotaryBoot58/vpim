@@ -10,7 +10,7 @@ short_desc="XLibre 3dfx Voodoo1/Voodoo2 2D video driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-video-voodoo"
-distfiles="https://github.com/X11Libre/xf86-video-voodoo/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-video-voodoo/archive/refs/tags/xlibre-xf86-video-voodoo-${version}.tar.gz"
 checksum=13d94cd94037ab950cf81a787fc9b9d87de0d2ec69ff5f4623278ea2fd27a2e6
 lib32disabled=yes
 configure_args="--prefix=/usr"

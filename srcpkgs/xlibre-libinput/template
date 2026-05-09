@@ -10,7 +10,7 @@ short_desc="XLibre libinput input driver"
 maintainer="rgcastrof <rogeriogirao1@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-libinput/"
-distfiles="https://github.com/X11Libre/xf86-input-libinput/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-libinput/archive/refs/tags/xlibre-xf86-input-libinput-${version}.tar.gz"
 checksum=d7d9246b6f9a03459a5b603b726aa4e4c0ec8ea669fff2f38976bc81eec96a44
 lib32disabled=yes
 
@@ -18,7 +18,7 @@ post_install() {
 	vlicense COPYING
 }
 
-xlibre-xf86-input-libinput-devel_package() {
+xlibre-libinput-devel_package() {
 	lib32disabled=yes
 	depends="${makedepends}"
 	short_desc+=" - development files"

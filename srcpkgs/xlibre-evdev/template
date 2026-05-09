@@ -10,7 +10,7 @@ short_desc="XLibre event device input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-evdev"
-distfiles="https://github.com/X11Libre/xf86-input-evdev/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-evdev/archive/refs/tags/xlibre-xf86-input-evdev-${version}.tar.gz"
 checksum=c810cc2d4ba63ee917f40b12e8e09c3e046653badcaace6897561dd3087944e8
 lib32disabled=yes
 configure_args="--prefix=/usr"
@@ -23,7 +23,7 @@ post_install() {
 	vlicense COPYING
 }
 
-xlibre-xf86-input-evdev-devel_package() {
+xlibre-evdev-devel_package() {
 	lib32disabled=yes
 	depends="${makedepends}"
 	short_desc+=" - development files"
