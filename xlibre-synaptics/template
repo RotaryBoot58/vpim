@@ -13,7 +13,7 @@ short_desc="XLibre synaptics touchpad input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-synaptics"
-distfiles="https://github.com/X11Libre/xf86-input-synaptics/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-synaptics/archive/refs/tags/xlibre-xf86-input-synaptics-${version}.tar.gz"
 checksum=fca6a16ed199505a27dc167e88722b4d45aa5f46e86561d6c6eee3d7a750a107
 lib32disabled=yes
 configure_args="--prefix=/usr"
@@ -26,7 +26,7 @@ post_install() {
 	vlicense COPYING
 }
 
-xlibre-xf86-input-synaptics-devel_package() {
+xlibre-synaptics-devel_package() {
 	lib32disabled=yes
 	short_desc+=" - development files"
 	pkg_install() {

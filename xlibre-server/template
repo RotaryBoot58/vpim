@@ -4,7 +4,7 @@ version=25.1.5
 revision=1
 build_style=meson
 configure_args="-Dipv6=true -Dxorg=true -Dxnest=true -Dxephyr=true -Dxvfb=true -Dhal=false -Dudev=true -Dxkb_dir=/usr/share/X11/xkb -Dxkb_output_dir=/var/lib/xkb -Dlinux_acpi=true -Dlinux_apm=false -Dsuid_wrapper=true -Dxcsecurity=true -Dglamor=true -Ddri2=true -Ddri3=true -Dglx=true -Dsystemd_logind=$(vopt_if elogind true false)"
-hostmakedepends="pkg-config xkbcomp flex awk gawk mawk nawk cmake"
+hostmakedepends="pkg-config xkbcomp flex gawk cmake"
 makedepends="
 	MesaLib-devel libXaw-devel libXfont2-devel libXrender-devel libXres-devel libXtst-devel
 	libXv-devel libXxf86dga-devel libdmx-devel libepoxy-devel openssl-devel libtirpc-devel

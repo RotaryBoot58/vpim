@@ -10,7 +10,7 @@ short_desc="XLibre Joystick input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-joystick/"
-distfiles="https://github.com/X11Libre/xf86-input-joystick/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-joystick/archive/refs/tags/xlibre-xf86-input-joystick-${version}.tar.gz"
 checksum=af821e11477d8c1bdb08ee2cbadfd556159d42b394699b2c980aa5c818441520
 lib32disabled=yes
 configure_args="--prefix=/usr"
@@ -24,7 +24,7 @@ post_install() {
 	vinstall $FILESDIR/50-joystick.conf 644 usr/share/X11/xorg.conf.d
 }
 
-xlibre-xf86-input-joystick-devel_package() {
+xlibre-joystick-devel_package() {
 	lib32disabled=yes
 	short_desc+=" - development files"
 	pkg_install() {

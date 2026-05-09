@@ -10,7 +10,7 @@ short_desc="XLibre void input driver"
 maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
 license="MIT"
 homepage="https://github.com/X11Libre/xf86-input-void"
-distfiles="https://github.com/X11Libre/xf86-input-void/archive/refs/tags/${pkgname}-${version}.tar.gz"
+distfiles="https://github.com/X11Libre/xf86-input-void/archive/refs/tags/xlibre-xf86-input-void-${version}.tar.gz"
 checksum=2b242b55e429c25e31ca884dedf43bb60be4dbdd0a7ff015f10fa23cd6e08064
 configure_args="--prefix=/usr"
 
