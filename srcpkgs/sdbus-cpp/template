@@ -1,0 +1,19 @@
+# Template file for 'sdbus-cpp'
+pkgname=sdbus-cpp
+version=2.2.1
+revision=1
+build_style=cmake
+configure_args="-DSDBUSCPP_BUILD_LIBSYSTEMD=OFF -DLIBSYSTEMD_LIBRARIES=elogind"
+hostmakedepends="pkgconf meson ninja git"
+makedepends="elogind-devel libelogind libmount-devel libcap-devel zlib-devel"
+short_desc="High-level C++ D-Bus library to provide API in modern C++"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="LGPL-2.1-only"
+homepage="https://github.com/Kistler-Group/sdbus-cpp"
+distfiles="https://github.com/Kistler-Group/sdbus-cpp/archive/refs/tags/v${version}.tar.gz"
+checksum=da69a0104beb6e51415a59f1571a47beb1eacc65cc6027b250eb1cf13ff4f802
+
+post_install() {
+  vlicense COPYING
+  vlicense COPYING-LGPL-Exception
+}
