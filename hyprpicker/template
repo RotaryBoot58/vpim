@@ -1,0 +1,25 @@
+# Template file for 'hyprpicker'
+pkgname=hyprpicker
+version=0.4.7
+revision=1
+build_style=cmake
+hostmakedepends="pkgconf"
+makedepends="
+	wayland-devel wayland-protocols cairo-devel libxkbcommon-devel
+	pango-devel libjpeg-turbo-devel libglvnd-devel wlroots-devel ninja
+	hyprwayland-scanner hyprutils
+"
+short_desc="Wlroots-compatible Wayland color picker that does not suck"
+maintainer="RotaryBoot58 <petersoncraft20@proton.me>"
+license="BSD-3-Clause"
+homepage="https://github.com/hyprwm/hyprpicker"
+distfiles="https://github.com/hyprwm/hyprpicker/archive/refs/tags/v${version}.tar.gz"
+checksum=cde02b92abe372187c9d59a7cb2ca07ede5c3e1a8c81ed8b209dc0d3ac5f0339
+
+pre_build() {
+	make protocols
+}
+
+post_install() {
+	vlicense LICENSE
+}
