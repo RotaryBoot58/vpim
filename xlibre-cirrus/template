@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-cirrus'
-pkgname=xlibre-xf86-video-cirrus
+# Template file for 'xlibre-cirrus'
+pkgname=xlibre-cirrus
 version=25.0.0
 revision=1
 build_style=gnu-configure

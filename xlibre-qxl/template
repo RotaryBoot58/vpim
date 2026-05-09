@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-qxl'
-pkgname=xlibre-xf86-video-qxl
+# Template file for 'xlibre-qxl'
+pkgname=xlibre-qxl
 version=25.0.0
 revision=1
 build_style=gnu-configure

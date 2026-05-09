@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-input-elographics'
-pkgname=xlibre-xf86-input-elographics
+# Template file for 'xlibre-elographics'
+pkgname=xlibre-elographics
 version=25.0.1
 revision=1
 build_style=gnu-configure

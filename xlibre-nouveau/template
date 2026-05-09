@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-nouveau'
-pkgname=xlibre-xf86-video-nouveau
+# Template file for 'xlibre-nouveau'
+pkgname=xlibre-nouveau
 version=25.0.0
 revision=1
 build_style=gnu-configure

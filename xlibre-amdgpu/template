@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-amdgpu'
-pkgname=xlibre-xf86-video-amdgpu
+# Template file for 'xlibre-amdgpu'
+pkgname=xlibre-amdgpu
 version=25.1.1
 revision=1
 build_style=gnu-configure
