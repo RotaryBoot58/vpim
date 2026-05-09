@@ -1,5 +1,5 @@
-# Template file for 'xf86-input-libinput'
-pkgname=xlibre-xf86-input-libinput
+# Template file for 'xlibre-libinput'
+pkgname=xlibre-libinput
 version=25.0.1
 revision=1
 build_style=meson

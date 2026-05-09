@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-dummy'
-pkgname=xlibre-xf86-video-dummy
+# Template file for 'xlibre-dummy'
+pkgname=xlibre-dummy
 version=25.0.0
 revision=1
 build_style=gnu-configure

@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-input-synaptics'
-pkgname=xlibre-xf86-input-synaptics
+# Template file for 'xlibre-synaptics'
+pkgname=xlibre-synaptics
 version=25.0.0
 revision=1
 build_style=gnu-configure

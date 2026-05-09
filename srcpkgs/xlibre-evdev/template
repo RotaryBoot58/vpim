@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-input-evdev'
-pkgname=xlibre-xf86-input-evdev
+# Template file for 'xlibre-evdev'
+pkgname=xlibre-evdev
 version=25.0.0
 revision=1
 build_style=gnu-configure

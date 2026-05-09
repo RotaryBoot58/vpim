@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-sisusb'
-pkgname=xlibre-xf86-video-sisusb
+# Template file for 'xlibre-sisusb'
+pkgname=xlibre-sisusb
 version=25.0.0
 revision=1
 build_style=gnu-configure

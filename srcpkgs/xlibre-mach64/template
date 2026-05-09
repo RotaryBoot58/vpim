@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-mach64'
-pkgname=xlibre-xf86-video-mach64
+# Template file for 'xlibre-mach64'
+pkgname=xlibre-mach64
 version=25.0.0
 revision=1
 build_style=gnu-configure

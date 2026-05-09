@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-input-wacom'
-pkgname=xlibre-xf86-input-wacom
+# Template file for 'xlibre-wacom'
+pkgname=xlibre-wacom
 version=25.0.0
 revision=1
 build_style=meson

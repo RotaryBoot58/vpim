@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-vesa'
-pkgname=xlibre-xf86-video-vesa
+# Template file for 'xlibre-vesa'
+pkgname=xlibre-vesa
 version=25.0.0
 revision=1
 build_style=gnu-configure

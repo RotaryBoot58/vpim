@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-intel'
-pkgname=xlibre-xf86-video-intel
+# Template file for 'xlibre-intel'
+pkgname=xlibre-intel
 version=25.0.1
 revision=1
 build_style=gnu-configure

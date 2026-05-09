@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-voodoo'
-pkgname=xlibre-xf86-video-voodoo
+# Template file for 'xlibre-voodoo'
+pkgname=xlibre-voodoo
 version=25.0.0
 revision=1
 build_style=gnu-configure

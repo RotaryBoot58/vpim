@@ -1,5 +1,5 @@
-# Template file for 'xlibre-xf86-video-r128'
-pkgname=xlibre-xf86-video-r128
+# Template file for 'xlibre-r128'
+pkgname=xlibre-r128
 version=25.0.0
 revision=1
 build_style=gnu-configure
